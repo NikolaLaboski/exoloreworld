@@ -13,7 +13,7 @@ function App() {
       <HashRouter>
         <Navbar />
         <Switch>
-          <Route exact path='/explore' exact component={Home} />
+          <Route exact path='/explore' component={Home} />
           <Route exact path='/services' component={Services} />
           <Route exact path='/products' component={Products} />
           <Route exact path='/sign-up' component={SignUp} />
