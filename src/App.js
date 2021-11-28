@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
@@ -10,15 +10,16 @@ import SignUp from './components/pages/SignUp';
 function App() {
   return (
     <>
-      <Router>
+      <HashRouter>
         <Navbar />
         <Switch>
-          <Route path='/explore' exact component={Home} />
-          <Route path='/services' component={Services} />
-          <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
+          <Route exact path='/explore' exact component={Home} />
+          <Route exact path='/services' component={Services} />
+          <Route exact path='/products' component={Products} />
+          <Route exact path='/sign-up' component={SignUp} />
         </Switch>
-      </Router>
+      </HashRouter>
+      
     </>
   );
 }
